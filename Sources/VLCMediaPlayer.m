@@ -1108,6 +1108,7 @@ static void HandleMediaPlayerSnapshot(const libvlc_event_t * event, void * self)
 {
     if (_viewpoint == NULL) {
         _viewpoint = libvlc_video_new_viewpoint();
+        NSAssert(_viewpoint != NULL, @"viewpoint allocation failed");
     }
     return _viewpoint;
 }
